@@ -2,12 +2,12 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/assets/css/gallery_css.css"> 
-
+<link rel="stylesheet" href="/assets/css/gallery_css.css">
+<link rel="stylesheet" href="/assets/css/dark_mode.css">
 </head>
 <body>
-
-<header>  
+  <script src="/assets/js/dark_mode.js"></script>
+<header>
   <h3>Website Statis</h3>
 </header>
 
@@ -15,12 +15,12 @@
   {% include "navbar.njk" %}
 </nav>
 
-<div class="row"> 
+<div class="row">
   <div class="column">
     <img src="/assets/gambar/minato-2.webp" style="width:100%">
     <img src="/assets/gambar/minato-3.webp" style="width:100%">
     <img src="/assets/gambar/itachi-1.webp" style="width:100%">
-  </div>  
+  </div>
   <div class="column">
     <img src="/assets/gambar/minato-7.gif" style="width:100%">
     <img src="/assets/gambar/itachi-5.webp" style="width:100%">
@@ -41,3 +41,17 @@
 
 </body>
 </html>
+
+<script>
+  swicther = document.getElementById("tombol")
+  swicther.onclick = function () {
+    body = document.getElementsByTagName("body")[0]
+    if (swicther.innerText == "Mode malam") {
+        swicther.innerText = "Mode siang";
+        body.classList.add("malam")
+    } else {
+        swicther.innerText = "Mode malam";
+        body.classList.remove("malam")
+    }
+}
+</script>
